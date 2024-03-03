@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="contactstyle.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="contactInfo">
+                <div>
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span><img src="contactImages/location.png"></span>
+                            <span>
+                                272,Mount Abu Hostel,<br>
+                                Boys Hostel Complex,MDU,<br>
+                                Rohtak,Haryana,124001
+                            </span>
+                        </li>
+                        <li>
+                            <span><img src="contactImages/mail.png"></span>
+                            <span>
+                                25565akash.2020cse@gmail.com
+                            </span>
+                        </li>
+                        <li>
+                            <span><img src="contactImages/call.png"></span>
+                            <span>
+                                +91 931 1075 3461
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="sci">
+                    <li><a href="https://www.instagram.com/akashsingh7755/"><img src="contactImages/3.png"></a></li>
+                    <li><a href="https://www.facebook.com/akashsingh7755"><img src="contactImages/1.png"></a></li>
+                    <li><a href="https://twitter.com/SinghAkash77"><img src="contactImages/2.png"></a></li>
+                    <li><a href="https://www.linkedin.com/in/akash-singh-172a0222a/"><img src="contactImages/5.png"></a></li>
+                </ul>
+            </div>
+            <form name="submit-to-google-sheet">
+                <div class="contactForm">
+                    <h2>Drop a message!</h2>
+                    <div class="formBox">
+                        <div class="inputBox w50">
+                            <input type="text" name="FirstName" required>
+                            <span>First Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" name="LastName" required>
+                            <span>Last Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" name="Email" required id="email">
+                            <span>Email Address</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" name="Mobile No." required>
+                            <span>Mobile Number</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <textarea required name="Message"></textarea>
+                            <span>Write your message here...</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbygZMnfNa6oBq3b-g0XXZb9jOk4OrqYV-aoe5zb601zwPzeok3f953RaNs_mx7H3WT-2A/exec'
+        const form = document.forms['submit-to-google-sheet']
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                if (response.ok) {
+                    alert("Message sent successfully")
+                }
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+
+    </script>
+
+<!-- //Host : "smtp.elasticemail.com",
+Username : "abstractcoder01@gmail.com",
+Password : "95B80832F8015FB6F785757DC294553E9DF3",// -->
+
+</body>
+</html>
