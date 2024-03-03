@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoneInOne</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <video autoplay loop muted>
+        <source src="LandingVideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <header>
+        <nav>
+            <div class="main-nav container flex">
+                <a href="#" onclick="reload()" class="company-logo">
+                    <img src="logo1.png" alt="myLogo">
+                </a>
+                <div class="nav-links">
+                    <ul class="flex">
+                        <li class="hover-link nav-item" id="Home"><a href="/Landing Page/index.html" onclick="reload()">Home</a></li>
+                        <li class="hover-link nav-item" id="About Me"><a href="/About Me/index.html">About Me</a></li>
+                        <li class="hover-link nav-item" id="Portfolio"><a href="https://akashsingh7755.github.io/Portfolio/">Portfolio</a></li>
+                        <li class="hover-link nav-item" id="Contact"><a href="/Contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+        </nav>
+    </header>
+
+    <div id="main">
+        <div class="row">
+            <div class="box news">
+                <a href="/News/index.html">
+                    <div class="overlay">
+                        <h1>News</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="box wallpaper">
+                <a href="/Wallpaper/index.html">
+                    <div class="overlay">
+                        <h1>Wallpapers</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box weather">
+                <a href="/Weather/index.html">
+                <div class="overlay">
+                    <h1>Weather</h1>
+                </div></a>
+            </div>
+            <div class="box lets-play">
+                <a href="/Let's Play/index.html">
+                    <div class="overlay">
+                        <h1>Bubble Game</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 DoneInOne built by Akash Singh. All rights reserved.</p>
+    </div>
+  
+
+    <script src="script.js"></script>
+</body>
+</html>
