@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+ul{
+    list-style: none;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.main-nav{
+    justify-content: space-around;
+    padding: 8px 0;
+    cursor: pointer;
+    background-color: #e8f5e9;
+    position: relative;
+}
+.myLogo img{
+    width: 10px;
+}
+.main-nav img{
+    width: 180px;
+    margin-left: -180px;
+}
+.nav-links ul{
+    margin-left: 220px;
+    gap: 76px;
+    font-weight: 700;
+}
+.hover-links{
+    cursor: pointer;
+}
+li a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    position: relative;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    padding: 0px 10px;
+}
+li:after{
+    content: "";
+    position: absolute;
+    background-color: red;
+    height: 3px;
+    width: 0px;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+    
+}
+li:hover:after{
+    width: 100%;
+}
+li a:hover{
+    color: #0066cc;
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+}
+#main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.box{
+    width: 376px; 
+    height: 250px; 
+    color: white;
+    background-color: orange;
+    text-align: center;
+    line-height: 200px;
+    margin: 10px; 
+    border-radius: 10px;
+    cursor: pointer;
+}
+.news{
+    background-image: url(news1.jpg);
+    background-size: cover;
+}
+.wallpaper{
+    background-image: url(wallpaper.avif);
+    background-size: cover;
+}
+.weather{
+    background-image: url(weather.png);
+    background-size: cover;
+}
+.lets-play{
+    background-image: url(games3.jpeg);
+    background-size: cover;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, #051937, #4a265a, #952961, #d13e4a, #eb7612);
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all ease 0.6s 0.05s;
+}
+.overlay h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.overlay:hover{
+    opacity: 1;
+}
+.row a{
+    text-decoration: none;
+    color: white;
+}
+.row .news:hover{
+    transform: translate3d(-10px,-10px,-60px);
+    transition: transform 0.5s;
+}
+.row .wallpaper:hover{
+    transform: translate3d(10px,-10px,-60px);
+    transition: transform 0.5s;
+}
+.row .weather:hover{
+    transform: translate3d(-10px,10px,60px);
+    transition: transform 0.5s;
+}
+.row .lets-play:hover{
+    transform: translate3d(10px,10px,60px);
+    transition: transform 0.5s;
+}
+.footer {
+    background-color: transparent; 
+    color: #ffffff; 
+    text-align: center;
+    padding: 20px;
+    position: absolute; 
+    width: 100%;
+    bottom: -100px;
+}
+.footer p {
+    font-size: 14px;
+    margin: 0;
+}
+  
+  
